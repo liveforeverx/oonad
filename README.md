@@ -5,8 +5,8 @@ Monadic like macro for programatic control of OO like chained calls over tuple m
 In Elixir, the . operator is left associative, so we can write:
 
     a.
-      b(...).
-      c(...)
+      b(something).
+      c(something_else).
       ...
     
 This can be used with tuple modules or records (which are implemented via tuple modules) to write elegant chain calls:
