@@ -37,7 +37,7 @@ The oonad macro adds monadic like programability to the dot (.) operator, so we 
         value
     end         # {:error, :division_by_zero}
     
-In default implementation, on every left.right(...) call, if the left hand value is nil, or {:error, _}, than it will be returned instead of chaining through (which would usually cause an exception).
+In default implementation, on every left.right(...) call, if the left hand value is nil, or {:error, _}, then it will be returned instead of chaining through (which would usually cause an exception).
 
 You can implement your own behavior:
 
