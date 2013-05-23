@@ -38,7 +38,7 @@ defmodule Oonad do
   defp transform(opts, {{:., context, [left, right]}, _, args}) do
     left = transform(opts, left)
     monad = opts[:monad] || Oonad.Std
-    quote line: context[:line] do
+    quote do
       unquote(monad).bind(
         unquote(left), 
         fn() -> unquote(left).unquote(right)(unquote_splicing(args || [])) end
