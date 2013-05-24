@@ -35,7 +35,7 @@ defmodule Oonad do
   
   defp transform(opts, {:__block__, _, ops}), do: transform(opts, ops)
   
-  defp transform(opts, {{:., context, [left, right]}, _, args}) do
+  defp transform(opts, {{:., _context, [left, right]}, _, args}) do
     left = transform(opts, left)
     monad = opts[:monad] || Oonad.Std
     quote do
